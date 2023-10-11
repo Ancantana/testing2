@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Authentic Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #container {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    #video-container {
+      flex: 1;
+      background-color: #EC0D0D;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 0%; /* Adjust the size of the video feed */
+      height: 100%;
+    }
+    #write-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%; /* Adjust the size of the text area */
+      height: 100%;
+    }
+    canvas {
+      display: block;
+      max-width: 200%;
+      max-height: 200%;
+    }
+    textarea {
+      width: 100%;
+      height: 100%;
+      border: none;
+      resize: none;
+      padding: 20px; /* Optional: add some padding to the text area */
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="video-container">
+      <video id="captureVideo" autoplay></video>
+    </div>
+    <div id="write-container">
+      <textarea id="textInput"></textarea>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
+
